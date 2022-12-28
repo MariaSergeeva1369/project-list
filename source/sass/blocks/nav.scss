@@ -1,0 +1,34 @@
+.nav__button {
+  display: none;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: end;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  display: inline-block;
+  vertical-align: baseline;
+  color: $color-default-white;
+  text-align: center;
+  line-height: 20px;
+  padding: 5px;
+
+  @include hover-focus {
+    opacity: 0.6;
+  }
+
+  @include focus {
+    outline: 2px solid $color-torch-red;
+    border-radius: 2px;
+  }
+}

@@ -1,0 +1,42 @@
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider__item {
+  max-width: 385px;
+}
+
+.slider__link {
+  cursor: pointer;
+  outline: none;
+}
+
+.slider__link:hover .slider__description,
+.slider__link:focus .slider__description {
+  color: #302683;
+  text-decoration: underline;
+  outline: none;
+}
+
+.slider__image {
+  max-width: none;
+  margin-bottom: 20px;
+}
+
+.slider__description {
+  margin: 0 0 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #F9FBFD;
+  text-align: center;
+}
+
+.slider__slider-control {
+  position: absolute;
+  top: 280px;
+  left: 0;
+  right: 0;
+}

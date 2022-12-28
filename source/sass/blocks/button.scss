@@ -1,0 +1,38 @@
+.button {
+  display: inline-flex;
+  padding: 10px 20px;
+  vertical-align: center;
+  justify-content: center;
+  align-items: center;
+
+  color: $color-default-white;
+
+  background-color: $color-purple;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  min-height: 50px;
+  text-align: center;
+
+  transition: opacity $trans-default;
+
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover {
+    opacity: 0.8;
+  }
+
+  @include focus {
+    outline: 2px solid $color-default-white;
+    outline-offset: -6px;
+  }
+}
