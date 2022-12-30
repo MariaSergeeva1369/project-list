@@ -16,13 +16,13 @@
   }
 
   @include focus {
-    border-radius: 4px;
-    border: 2px solid $color-default-white;
-    outline: none;
+    background-color: rgba($color: #fff, $alpha: 1);
+    outline: 2px solid $color-torch-red;
   }
 }
 
-.slider-control__button:hover svg {
+.slider-control__button:hover svg,
+.slider-control__button:focus svg {
   fill: $color-torch-red;
 }
 
