@@ -17,13 +17,15 @@ $color-seagull:                     #83b3d3;
 $color-perano:                      #A7B0EC;
 $color-medium-purple:               #9070ec;
 $color-purple:                      #ad6dcb;
+$color-light-gray:                  #f8f8fc;
 $color-transparent-gray:            rgba(130, 179, 211, 0.122);
 
 
 
 // Gradient
 
-$main-gradient : linear-gradient(90deg, #c0cedd, #a7b0ec, #ad6dcb);
+$main-gradient : linear-gradient(90deg, #a7b0ec, #b8adeb, #ad6dcb);
+$main-gradient-reverse : linear-gradient(90deg, #ad6dcb, #b8adeb, #a7b0ec);
 
 // Typography
 // ---------------------------------

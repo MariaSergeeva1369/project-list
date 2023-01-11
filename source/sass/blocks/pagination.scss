@@ -5,8 +5,8 @@
 }
 
 .swiper-pagination-bullet {
-  width: 62px;
-  height: 4px;
+  width: 12px;
+  height: 12px;
   padding: 0;
   margin: 0;
   background-color: $color-default-white;
@@ -14,7 +14,6 @@
   outline: none;
   cursor: pointer;
   opacity: 1;
-  border-radius: 0;
 
   &:hover,
   &:focus {
@@ -38,6 +37,7 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;

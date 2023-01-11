@@ -1,0 +1,20 @@
+.footer {
+  background: $main-gradient-reverse;
+  min-width: 320px;
+  color: $color-default-white;
+}
+
+.footer__wrapper {
+  padding-top: 80px;
+  padding-bottom: 40px;
+
+  @include vp-1023 {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  @include vp-767 { 
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+}
