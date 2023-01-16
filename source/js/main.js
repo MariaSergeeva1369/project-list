@@ -1,9 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
 import {setSliderAttribute} from './modules/slider';
-import {navRemoveNojs, navInit} from './modules/navigation';
-import {sortListInit} from './modules/sort-list';
-import './modules/sort-list';
+import {navMenu, navInit} from './modules/navigation';
+import {buttonContainer, sortListInit} from './modules/sort-list';
+import {skillsContainers, accordionInit} from './modules/accordion';
+import {removeNojsClass} from './utils/utils';
 
 // ---------------------------------
 
@@ -15,15 +15,17 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // Modules
+  removeNojsClass(navMenu);
+  removeNojsClass(buttonContainer);
+  removeNojsClass(skillsContainers);
   setSliderAttribute();
-  navRemoveNojs();
   navInit();
+  accordionInit();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
     sortListInit();
   });
 });

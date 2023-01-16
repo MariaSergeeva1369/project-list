@@ -1,33 +1,29 @@
 import {FocusLock} from '../utils/focus-lock.js';
 import {ScrollLock} from '../utils/scroll-lock.js';
-import {breakpoint, isEscapeKey} from '../utils/utils'
+import {breakpoint, isEscapeKey} from '../utils/utils';
 
-const navMenu = document.querySelector('[data-setting-target="navigation"]');
+const navMenu = document.querySelector('[data-setting-name="navigation"]');
 const mainElement = document.querySelector('main');
 
 const focusLock = new FocusLock();
 const scrollLock = new ScrollLock();
 
-const navRemoveNojs = () => {
-  navMenu.classList.remove('is-nojs');
-};
-
 const lockFocusScroll = () => {
   focusLock.lock('header');
   scrollLock.disableScrolling();
-}
+};
 
 const unlockFocusScroll = () => {
   focusLock.unlock();
   scrollLock.enableScrolling();
-}
+};
 
 const closeMenu = () => {
   navMenu.classList.remove('is-opened');
   navMenu.classList.add('is-closed');
   unlockFocusScroll();
   mainElement.removeEventListener('click', closeMenu);
-}
+};
 
 const closeMenulOnEscape = (evt) => {
   if (isEscapeKey(evt)) {
@@ -35,7 +31,7 @@ const closeMenulOnEscape = (evt) => {
     closeMenu();
     document.removeEventListener('keydown', closeMenulOnEscape);
   }
-}
+};
 
 const applySettings = () => {
   if (navMenu.classList.contains('is-opened')) {
@@ -47,7 +43,7 @@ const applySettings = () => {
     document.removeEventListener('keydown', closeMenulOnEscape);
     mainElement.removeEventListener('click', closeMenu);
   }
-}
+};
 
 const menuHandler = () => {
   if (!breakpoint.matches) {
@@ -63,20 +59,20 @@ const menuHandler = () => {
 
     applySettings();
   }
-}
+};
 
 const navInit = () => {
   if (navMenu) {
     navMenu.addEventListener('click', menuHandler);
   }
-}
+};
 
 const navBreakpointChecker = () => {
   if (breakpoint.matches && navMenu.classList.contains('is-opened')) {
     closeMenu();
-  } 
-}
+  }
+};
 
 breakpoint.addEventListener('change', navBreakpointChecker);
 
-export {navRemoveNojs, navInit};
+export {navInit, navMenu};

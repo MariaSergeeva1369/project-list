@@ -1,5 +1,5 @@
 .intro {
-  background: $main-gradient;
+  background: $main-gradient-wide;
   min-width: 320px;
 }
 
@@ -11,15 +11,13 @@
   color: $color-default-white;
 
   @include vp-1023 {
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding: 20px 0 30px 0;
     display: flex;
     flex-direction: column;
   }
 
   @include vp-767 {
-    padding-top: 10px;
-    padding-bottom: 30px;
+    padding: 10px 0 30px 0;
   }
 }
 
@@ -30,6 +28,18 @@
   @include vp-1023 {
     max-width: none;
     margin-right: 0;
+  }
+}
+
+.intro__intro-text-wrapper {
+  @include vp-1023 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include vp-767 {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -53,8 +63,45 @@
   }
 }
 
+.intro__list-wrapper {
+  @include vp-1023 {
+    padding: 15px 24px;
+
+    &--prof,
+    &--personal {
+      margin: 0;
+      border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+    }
+
+    &--prof {
+      border-top: 1px solid rgba(248, 253, 255, 0.7);
+    }
+
+    &--personal {
+      margin: 0 0 30px;
+    }
+  }
+
+  @include vp-767 {
+    padding: 16px;
+  }
+}
+
+.intro__sub-title {
+  font-size: 22px;
+  margin: 0 0 12px;
+  position: relative;
+
+  @include vp-1023 {
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0;
+  }
+}
+
 .intro__text {
-  margin: 0;
+  margin: 0 0 25px;
+  font-size: 18px;
 
   @include vp-1023 {
     margin-bottom: 40px;
@@ -68,5 +115,94 @@
     width: 100%;
     min-width: 288px;
     max-width: 385px;
+  }
+}
+
+// Список навыков
+
+.intro__skill-list {
+  @include vp-1023 {
+    margin-top: 20px;
+  }
+}
+
+.intro__list-button {
+  display: none;
+
+  @include vp-1023 {
+    display: inline-block;
+    vertical-align: baseline;
+    position: absolute;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 5px;
+      width: 2px;
+      height: 20px;
+      background-color: $color-default-white;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      width: 2px;
+      height: 20px;
+      background-color: $color-default-white;
+      transform: rotate(-45deg);
+    }
+
+    @include hover-focus {
+      outline: 2px solid $color-default-white;
+      border-radius: 2px;
+    }
+  }
+}
+
+// Список навыков - закрытый
+
+.is-closed .intro__list-button {
+  @include vp-1023 {
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.is-closed .intro__skill-list {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+// Список навыков -  при отключенном js
+
+.is-nojs .intro__skill-list {
+  @include vp-1023 {
+    display: block;
+    transition: 3s linear;
+  }
+}
+
+.is-nojs .intro__list-button {
+  @include vp-1023 {
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
   }
 }

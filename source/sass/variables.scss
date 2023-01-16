@@ -11,21 +11,19 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
 $color-neon-blue:                   #2c39f2;
-$color-torch-red:                   #FF0054;
+$color-torch-red:                   #ff0054;
 
 $color-seagull:                     #83b3d3;
-$color-perano:                      #A7B0EC;
+$color-perano:                      #a7b0ec;
 $color-medium-purple:               #9070ec;
 $color-purple:                      #ad6dcb;
 $color-light-gray:                  #f8f8fc;
-$color-transparent-gray:            rgba(130, 179, 211, 0.122);
-
-
+$color-transparent-gray:            rgba(130, 179, 211, 0.12);
 
 // Gradient
 
-$main-gradient : linear-gradient(90deg, #a7b0ec, #b8adeb, #ad6dcb);
-$main-gradient-reverse : linear-gradient(90deg, #ad6dcb, #b8adeb, #a7b0ec);
+$main-gradient-wide : linear-gradient(90deg, #a7b0ec, #ad6dcb, #ad6dcb);
+$main-gradient : linear-gradient(90deg, #ad6dcb, #b8adeb, #a7b0ec);
 
 // Typography
 // ---------------------------------

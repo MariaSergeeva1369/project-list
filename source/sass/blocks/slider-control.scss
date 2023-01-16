@@ -6,17 +6,17 @@
 .slider-control__button {
   padding: 0;
   border: none;
-  background-color: rgba($color: #fff, $alpha: 0.6);
+  background-color: rgba($color: #ffffff, $alpha: 0.6);
   border-radius: 50%;
   width: 44px;
 
 
   @include hover {
-    background-color: rgba($color: #fff, $alpha: 1);
+    background-color: rgba($color: #ffffff, $alpha: 1);
   }
 
   @include focus {
-    background-color: rgba($color: #fff, $alpha: 1);
+    background-color: rgba($color: #ffffff, $alpha: 1);
     outline: 2px solid $color-torch-red;
   }
 }

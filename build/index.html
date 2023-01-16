@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="На данном сайте представлен список проектов, реализованных Сергеевой М.Н. Каждый проект дополнен ссылкой на сайт проекта и github">
     <title>Мария Сергеева - Список проектов</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/logo.svg" type="image/svg+xml">
   </head>
+
   <body>
+
+    <h1 class="visually-hidden">Сайт-резюме</h1>
+
     <div class="wrapper">
       <header class="header">
         <div class="header__wrapper container">
-          <nav class="header__nav nav is-closed is-nojs" data-setting-target="navigation">
+          <nav class="header__nav nav is-closed is-nojs" data-setting-name="navigation">
             <button class="nav__toggle" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
@@ -35,60 +39,69 @@
 
       <main>
 
-        <h1 class="visually-hidden">Сайт-резюме</h1>
-
         <section class="intro" id="intro">
           <div class="intro__wrapper container">
             <div class="intro__content-wrapper">
-              <h2 class="intro__title">Навыки и сертификаты</h2>
-              <h3 class="intro__sub-title">Junior Frontend-developer</h3> 
-              <p class="intro__text">Прошла курс по профессии "Фронтенд-разработчик" в HTML Academy. Получила опыт разработки в "Акселератор HTML Academy". За 3 месяца работы реализовала 3 проекта. </p>
-              <h3 class="intro__sub-title">Профессиональные навыки:</h3>
-              <ul class="intro__skill-list">
-                <li class="intro__skill-item">
-                  HTML, CSS, JavaScript
-                </li>
-                <li class="intro__skill-item">
-                  опыт адаптивной и кроссбраузерной верстки
-                </li>
-                <li class="intro__skill-item">
-                  понимание особенностей мобильной верстки
-                </li>
-                <li class="intro__skill-item">
-                  использование препроцессоров LESS / CASS
-                </li>
-                <li class="intro__skill-item">
-                  понимание и использование методологии BEM
-                </li>
-                <li class="intro__skill-item">
-                  опыт работы с Git, webpack, gulp, npm, PixelPerfect
-                </li>
-                <li class="intro__skill-item">
-                  начальные знания React
-                </li>
-              </ul>
-              <h3 class="intro__sub-title">Личные навыки:</h3>
-              <ul class="intro__skill-list">
-                <li class="intro__skill-item">
-                  внимательность
-                </li>
-                <li class="intro__skill-item">
-                  ответственность
-                </li>
-                <li class="intro__skill-item">
-                  самостоятельность
-                </li>
-                <li class="intro__skill-item">
-                  аккуратность
-                </li>
-                <li class="intro__skill-item">
-                  обучаемость
-                </li>
-                <li class="intro__skill-item">
-                  умение работать в команде
-                </li>
-              </ul>
-              
+              <div class="intro__intro-text-wrapper">
+                <h2 class="intro__title">Навыки и сертификаты</h2>
+                <h3 class="intro__sub-title">Junior Frontend-developer</h3>
+                <p class="intro__text">Прошла курс по профессии "Фронтенд-разработчик" в HTML Academy. Получила опыт разработки в "Акселератор HTML Academy". За 3 месяца работы реализовала 3 проекта. </p>
+              </div>
+              <div class="intro__list-wrapper intro__list-wrapper--prof is-closed is-nojs" data-setting-name="skills">
+                <h3 class="intro__sub-title intro__sub-title--prof">Профессиональные навыки:</h3>
+                <button class="intro__list-button" type="button">
+                  <span class="visually-hidden">Открыть</span>
+                </button>
+                <ul class="intro__skill-list skill-list">
+                  <li class="skill-list__item">
+                    HTML, CSS, JavaScript
+                  </li>
+                  <li class="skill-list__item">
+                    опыт адаптивной и кроссбраузерной верстки
+                  </li>
+                  <li class="skill-list__item">
+                    понимание особенностей мобильной верстки
+                  </li>
+                  <li class="skill-list__item">
+                    использование препроцессоров LESS / CASS
+                  </li>
+                  <li class="skill-list__item">
+                    понимание и использование методологии BEM
+                  </li>
+                  <li class="skill-list__item">
+                    опыт работы с Git, webpack, gulp, npm, PixelPerfect
+                  </li>
+                  <li class="skill-list__item">
+                    начальные знания React
+                  </li>
+                </ul>
+              </div>
+              <div class="intro__list-wrapper intro__list-wrapper--personal is-closed is-nojs" data-setting-name="skills">
+                <h3 class="intro__sub-title intro__sub-title--personal">Личные навыки:</h3>
+                <button class="intro__list-button" type="button">
+                  <span class="visually-hidden">Открыть</span>
+                </button>
+                <ul class="intro__skill-list intro__skill-list--personal skill-list">
+                  <li class="skill-list__item">
+                    внимательность
+                  </li>
+                  <li class="skill-list__item">
+                    ответственность
+                  </li>
+                  <li class="skill-list__item">
+                    самостоятельность
+                  </li>
+                  <li class="skill-list__item">
+                    аккуратность
+                  </li>
+                  <li class="skill-list__item">
+                    обучаемость
+                  </li>
+                  <li class="skill-list__item">
+                    умение работать в команде
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="intro__slider slider swiper">
               <ul class="slider__list swiper-wrapper">
@@ -153,7 +166,7 @@
         <section class="projects" id="projects">
           <div class="projects__wrapper container">
             <h2 class="projects__title">Проекты</h2>
-            <ul class="projects__sort-list sort-list" data-setting-target=".projects__list" data-setting-name="buttons-container">
+            <ul class="projects__sort-list sort-list is-nojs" data-setting-target=".projects__list" data-setting-name="buttons-container">
               <li class="sort-list__item">
                 <button class="sort-list__button active" data-setting-name="viewCard" data-setting-value="is-tile">
                   <svg width="28" height="20" aria-hidden="true" focusable="false">
@@ -182,19 +195,19 @@
                 <h3 class="site-card__title">Проект "SUPERGYM"</h3>
                 <p class="site-card__description"> Адаптивность сетки: мобильная, планшетная и десктопная. На всех промежуточных разрешениях используется резиновая вёрстка. <span>Desktop First</span></p>
                 <h4 class="site-card__list-title site-card__list-title--tech">Используемые технологии:</h4>
-                <ul class="site-card__list site-card__list--tech">
-                  <li class="site-card__item">HTML</li>
-                  <li class="site-card__item">CSS, Sass (SCSS)</li>
-                  <li class="site-card__item">методология BEM</li>
-                  <li class="site-card__item">Java Script</li>
-                  <li class="site-card__item">слайдер Swiper</li>
-                  <li class="site-card__item">webpack, gulp</li>
+                <ul class="site-card__list site-card__list--tech skill-list skill-list--modified">
+                  <li class="skill-list__item">HTML</li>
+                  <li class="skill-list__item">CSS, Sass (SCSS)</li>
+                  <li class="skill-list__item">методология BEM</li>
+                  <li class="skill-list__item">Java Script</li>
+                  <li class="skill-list__item">слайдер Swiper</li>
+                  <li class="skill-list__item">webpack, gulp</li>
                 </ul>
                 <h4 class="site-card__list-title site-card__list-title--features">Особенности проекта:</h4>
-                <ul class="site-card__list site-card__list--features"> 
-                  <li class="site-card__item">табы</li>
-                  <li class="site-card__item">слайдер</li>
-                  <li class="site-card__item">карусель</li>
+                <ul class="site-card__list site-card__list--features skill-list skill-list--modified ">
+                  <li class="skill-list__item">табы</li>
+                  <li class="skill-list__item">слайдер</li>
+                  <li class="skill-list__item">карусель</li>
                 </ul>
                 <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/fitness/build/" target="_blank">Перейти на сайт проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/fitness" target="_blank">Перейти на github</a>
@@ -210,18 +223,18 @@
                 <h3 class="site-card__title">Проект "Круизы в Антарктику"</h3>
                 <p class="site-card__description"> Адаптивность сетки: мобильная, планшетная и десктопная. На всех промежуточных разрешениях используется резиновая вёрстка. <span>Desktop First</span></p>
                 <h4 class="site-card__list-title site-card__list-title--tech">Используемые технологии:</h4>
-                <ul class="site-card__list site-card__list--tech">
-                  <li class="site-card__item">HTML</li>
-                  <li class="site-card__item">CSS, Sass (SCSS)</li>
-                  <li class="site-card__item">методология BEM</li>
-                  <li class="site-card__item">Java Script</li>
-                  <li class="site-card__item">API Яндекс карт</li>
-                  <li class="site-card__item">webpack, gulp</li>
+                <ul class="site-card__list site-card__list--tech skill-list skill-list--modified">
+                  <li class="skill-list__item">HTML</li>
+                  <li class="skill-list__item">CSS, Sass (SCSS)</li>
+                  <li class="skill-list__item">методология BEM</li>
+                  <li class="skill-list__item">Java Script</li>
+                  <li class="skill-list__item">API Яндекс карт</li>
+                  <li class="skill-list__item">webpack, gulp</li>
                 </ul>
                 <h4 class="site-card__list-title site-card__list-title--features">Особенности проекта:</h4>
-                <ul class="site-card__list site-card__list--features"> 
-                  <li class="site-card__item">мобильное меню</li>
-                  <li class="site-card__item">карта Яндекс</li>
+                <ul class="site-card__list site-card__list--features skill-list skill-list--modified">
+                  <li class="skill-list__item">мобильное меню</li>
+                  <li class="skill-list__item">карта Яндекс</li>
                 </ul>
                 <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/cruise/build/" target="_blank">Перейти на сайт проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/cruise" target="_blank">Перейти на github</a>
@@ -237,18 +250,18 @@
                 <h3 class="site-card__title">Проект “Smart Device”</h3>
                 <p class="site-card__description"> Адаптивность сетки: мобильная, планшетная и десктопная. На всех промежуточных разрешениях используется резиновая вёрстка. <span>Desktop First</span></p>
                 <h4 class="site-card__list-title site-card__list-title--tech">Используемые технологии:</h4>
-                <ul class="site-card__list site-card__list--tech">
-                  <li class="site-card__item">HTML</li>
-                  <li class="site-card__item">CSS, Sass (SCSS)</li>
-                  <li class="site-card__item">методология BEM</li>
-                  <li class="site-card__item">Java Script</li>
-                  <li class="site-card__item">webpack, gulp</li>
+                <ul class="site-card__list site-card__list--tech skill-list skill-list--modified">
+                  <li class="skill-list__item">HTML</li>
+                  <li class="skill-list__item">CSS, Sass (SCSS)</li>
+                  <li class="skill-list__item">методология BEM</li>
+                  <li class="skill-list__item">Java Script</li>
+                  <li class="skill-list__item">webpack, gulp</li>
                 </ul>
                 <h4 class="site-card__list-title site-card__list-title--features">Особенности проекта:</h4>
-                <ul class="site-card__list site-card__list--features"> 
-                  <li class="site-card__item">аккордион</li>
-                  <li class="site-card__item">модальное окно</li>
-                  <li class="site-card__item">подробная маска номера телефона</li>
+                <ul class="site-card__list site-card__list--features skill-list skill-list--modified">
+                  <li class="skill-list__item">аккордион</li>
+                  <li class="skill-list__item">модальное окно</li>
+                  <li class="skill-list__item">подробная маска номера телефона</li>
                 </ul>
                 <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/smart-divice/build/" target="_blank">Перейти на сайт проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/smart-divice" target="_blank">Перейти на github</a>
@@ -264,19 +277,19 @@
                 <h3 class="site-card__title">Проект “Drink to go”</h3>
                 <p class="site-card__description"> Адаптивность сетки: мобильная, планшетная и десктопная. На всех промежуточных разрешениях используется фиксированная вёрстка. <span>Mobile First</span></p>
                 <h4 class="site-card__list-title site-card__list-title--tech">Используемые технологии:</h4>
-                <ul class="site-card__list site-card__list--tech">
-                  <li class="site-card__item">HTML</li>
-                  <li class="site-card__item">CSS, LESS</li>
-                  <li class="site-card__item">методология BEM</li>
-                  <li class="site-card__item">Java Script</li>
-                  <li class="site-card__item">Swiper, Leaflet</li>
-                  <li class="site-card__item">gulp</li>
+                <ul class="site-card__list site-card__list--tech skill-list skill-list--modified">
+                  <li class="skill-list__item">HTML</li>
+                  <li class="skill-list__item">CSS, LESS</li>
+                  <li class="skill-list__item">методология BEM</li>
+                  <li class="skill-list__item">Java Script</li>
+                  <li class="skill-list__item">Swiper, Leaflet</li>
+                  <li class="skill-list__item">gulp</li>
                 </ul>
                 <h4 class="site-card__list-title site-card__list-title--features">Особенности проекта:</h4>
-                <ul class="site-card__list site-card__list--features"> 
-                  <li class="site-card__item">мобильное меню</li>
-                  <li class="site-card__item">слайдер</li>
-                  <li class="site-card__item">карта на библиотеке leaflet</li>
+                <ul class="site-card__list site-card__list--features skill-list skill-list--modified">
+                  <li class="skill-list__item">мобильное меню</li>
+                  <li class="skill-list__item">слайдер</li>
+                  <li class="skill-list__item">карта на библиотеке leaflet</li>
                 </ul>
                 <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/drink-to-go/build/" target="_blank">Перейти на сайт проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/drink-to-go" target="_blank">Перейти на github</a>
@@ -292,16 +305,16 @@
                 <h3 class="site-card__title">Учебный проект “KEKSOBOOKING”</h3>
                 <p class="site-card__description">Сервис размещения объявлений о сдаче в аренду недвижимости. Пользователи могут размещать свои объявления или просматривать уже опубликованные.</p>
                 <h4 class="site-card__list-title site-card__list-title--tech">Используемые технологии:</h4>
-                <ul class="site-card__list site-card__list--tech">
-                  <li class="site-card__item">Java Script</li>
-                  <li class="site-card__item">Библиотеки Pristine, Nouislider, Leaflet</li>
-                  <li class="site-card__item">gulp</li>
+                <ul class="site-card__list site-card__list--tech skill-list skill-list--modified">
+                  <li class="skill-list__item">Java Script</li>
+                  <li class="skill-list__item">Библиотеки Pristine, Nouislider, Leaflet</li>
+                  <li class="skill-list__item">gulp</li>
                 </ul>
                 <h4 class="site-card__list-title site-card__list-title--features">Особенности проекта:</h4>
-                <ul class="site-card__list site-card__list--features"> 
-                  <li class="site-card__item">фильтрация объявлений</li>
-                  <li class="site-card__item">валидация формы через pristine</li>
-                  <li class="site-card__item">карта leaflet</li>
+                <ul class="site-card__list site-card__list--features skill-list skill-list--modified">
+                  <li class="skill-list__item">фильтрация объявлений</li>
+                  <li class="skill-list__item">валидация формы через pristine</li>
+                  <li class="skill-list__item">карта leaflet</li>
                 </ul>
                 <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/2022661-keksobooking-26" target="_blank">Перейти на сайт проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/2022661-keksobooking-26" target="_blank">Перейти на github</a>
@@ -317,18 +330,18 @@
                 <h3 class="site-card__title">Учебный проект “CAT ENERGY”</h3>
                 <p class="site-card__description">Адаптивность сетки: мобильная, планшетная и десктопная. На всех промежуточных разрешениях используется фиксированная вёрстка. <span>Mobile First</span></p>
                 <h4 class="site-card__list-title site-card__list-title--tech">Используемые технологии:</h4>
-                <ul class="site-card__list site-card__list--tech">
-                  <li class="site-card__item">HTML</li>
-                  <li class="site-card__item">CSS, LESS</li>
-                  <li class="site-card__item">методология BEM</li>
-                  <li class="site-card__item">Java Script</li>
-                  <li class="site-card__item">gulp</li>
+                <ul class="site-card__list site-card__list--tech skill-list skill-list--modified">
+                  <li class="skill-list__item">HTML</li>
+                  <li class="skill-list__item">CSS, LESS</li>
+                  <li class="skill-list__item">методология BEM</li>
+                  <li class="skill-list__item">Java Script</li>
+                  <li class="skill-list__item">gulp</li>
                 </ul>
                 <h4 class="site-card__list-title site-card__list-title--features">Особенности проекта:</h4>
-                <ul class="site-card__list site-card__list--features"> 
-                  <li class="site-card__item">3 страницы</li>
-                  <li class="site-card__item">мобильное меню</li>
-                  <li class="site-card__item">карта Google</li>
+                <ul class="site-card__list site-card__list--features skill-list skill-list--modified">
+                  <li class="skill-list__item">3 страницы</li>
+                  <li class="skill-list__item">мобильное меню</li>
+                  <li class="skill-list__item">карта Google</li>
                 </ul>
                 <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/2022661-cat-energy-25/build/index.html" target="_blank">Перейти на сайт проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/2022661-cat-energy-25" target="_blank">Перейти на github</a>
@@ -344,16 +357,16 @@
                 <h3 class="site-card__title">Учебный проект “SEDONA”</h3>
                 <p class="site-card__description">Сайт сверстан только на десктоп c фиксированной верской.</p>
                 <h4 class="site-card__list-title site-card__list-title--tech">Используемые технологии:</h4>
-                <ul class="site-card__list site-card__list--tech">
-                  <li class="site-card__item">HTML</li>
-                  <li class="site-card__item">CSS</li>
-                  <li class="site-card__item">Java Script</li>
-                  <li class="site-card__item">gulp</li>
+                <ul class="site-card__list site-card__list--tech skill-list skill-list--modified">
+                  <li class="skill-list__item">HTML</li>
+                  <li class="skill-list__item">CSS</li>
+                  <li class="skill-list__item">Java Script</li>
+                  <li class="skill-list__item">gulp</li>
                 </ul>
                 <h4 class="site-card__list-title site-card__list-title--features">Особенности проекта:</h4>
-                <ul class="site-card__list site-card__list--features"> 
-                  <li class="site-card__item">2 страницы</li>
-                  <li class="site-card__item">модальное окно</li>
+                <ul class="site-card__list site-card__list--features skill-list skill-list--modified">
+                  <li class="skill-list__item">2 страницы</li>
+                  <li class="skill-list__item">модальное окно</li>
                 </ul>
                 <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/sedona-update/build/" target="_blank">Перейти на сайт проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/sedona-update" target="_blank">Перейти на github</a>

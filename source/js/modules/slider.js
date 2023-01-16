@@ -21,18 +21,20 @@ if (sliderCertificatesList) {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  mySwiper.slideTo(1);
 }
 
-function setSliderAttribute () {
+function setSliderAttribute() {
   if (activeSlides.length >= 1) {
-    for ( let el of activeSlides) {
-      el.id='id-active-swiper-slide';
+    for (let el of activeSlides) {
+      el.id = 'id-active-swiper-slide';
     }
     const activeSlide = document.getElementById('id-active-swiper-slide');
     const activeLink = activeSlide.children;
 
-    for ( let el of activeLink) {
-      el.setAttribute('tabindex', '0')
+    for (let el of activeLink) {
+      el.setAttribute('tabindex', '0');
     }
   }
 }

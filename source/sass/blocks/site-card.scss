@@ -14,7 +14,7 @@
     max-width: 560px;
   }
 
-  @include vp-767 { 
+  @include vp-767 {
     padding: 10px;
     gap: 8px;
     max-width: 540px;
@@ -57,7 +57,7 @@
     line-height: 22px;
   }
 
-  @include vp-767 { 
+  @include vp-767 {
     font-size: 18px;
     line-height: 20px;
   }
@@ -73,7 +73,7 @@
     font-size: 16px;
   }
 
-  @include vp-767 { 
+  @include vp-767 {
     font-size: 14px;
     line-height: 16px;
   }
@@ -94,58 +94,15 @@
     line-height: 26px;
   }
 
-  @include vp-767 { 
+  @include vp-767 {
     font-size: 14px;
     line-height: 18px;
   }
 }
 
 .site-card__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  min-height: 145px;
-
   &--tech {
     grid-area: 5 / 1 / 6 / 2;
-  }
-
-  @include vp-767 { 
-    min-height: 0;
-  }
-}
-
-.site-card__item {
-  padding-left: 30px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 20px;
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 40%;
-    left: 13px;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: $color-torch-red;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 5px;
-  }
-
-  @include vp-1023 {
-    font-size: 16px;
-    line-height: 18px;
-  }
-
-  @include vp-767 { 
-    padding-left: 20px;
-    font-size: 12px;
-    line-height: 15px;
   }
 }
 
@@ -163,7 +120,7 @@
   grid-template-columns: min-content 1fr 1fr;
   gap: 10px 20px;
 
-  @include vp-1023 { 
+  @include vp-1023 {
     max-width: none;
   }
 }
@@ -188,7 +145,7 @@
   grid-area: 1 / 2 / 2 / -1;
 }
 
-.is-list .site-card__list-title { 
+.is-list .site-card__list-title {
   &--tech {
     grid-area: 2 / 2 / 3 / -1;
   }
@@ -199,10 +156,6 @@
 }
 
 .is-list .site-card__list {
-  min-height: 0;
-  display: flex;
-  flex-wrap: wrap;
-
   &--tech {
     grid-area: 3 / 2 / 4 / -1;
   }
@@ -210,10 +163,6 @@
   &--features {
     grid-area: 5 / 2 / 6 / -1;
   }
-}
-
-.is-list .site-card__item {
-  margin: 0;
 }
 
 .is-list .site-card__link-site {

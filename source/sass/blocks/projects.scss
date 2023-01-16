@@ -33,7 +33,7 @@
   }
 }
 
-.projects__list, 
+.projects__list,
 .projects__list.is-tile {
   margin: 0;
   padding: 0;
@@ -55,7 +55,11 @@
   }
 }
 
-.projects__list.is-list { 
+.projects__list.is-list {
   display: flex;
   flex-direction: column;
+}
+
+.is-nojs.projects__sort-list {
+  display: none;
 }

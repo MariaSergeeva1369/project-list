@@ -6,13 +6,13 @@ const settingButtons = document.querySelectorAll('[data-setting-name="viewCard"]
 const DEFAULT_CARD_VIEW = 'is-tile';
 
 const getDefaultButtonsParams = () => {
-  const button = Array.from(settingButtons).find((button) => button.dataset['settingValue'] === DEFAULT_CARD_VIEW);
+  const button = Array.from(settingButtons).find((item) => item.dataset['settingValue'] === DEFAULT_CARD_VIEW);
   const buttonsParams = {};
   const {settingName, settingValue} = button.dataset;
-  buttonsParams[settingName] = settingValue
+  buttonsParams[settingName] = settingValue;
 
   return buttonsParams;
-}
+};
 
 const setActiveButton = (params) => {
   for (const value of Object.values(params)) {
@@ -22,7 +22,7 @@ const setActiveButton = (params) => {
     const setButton = Array.from(settingButtons).find((button) => button.dataset['settingValue'] === value);
     setButton.classList.add('active');
   }
-}
+};
 
 const setClass = ({settingTarget}, params) => {
   const targetElement = document.querySelector(settingTarget);
@@ -38,10 +38,9 @@ const setClass = ({settingTarget}, params) => {
       setActiveButton(params);
     }
   }
-}
+};
 
 const settingButtonClickHandler = (evt, setting) => {
- 
   const button = evt.target.closest('button');
 
   if (!button) {
@@ -50,29 +49,29 @@ const settingButtonClickHandler = (evt, setting) => {
 
   const params = {};
   const {settingName, settingValue} = button.dataset;
-  params[settingName] = settingValue
+  params[settingName] = settingValue;
 
   setClass(setting, params);
-}
+};
 
 const sortListInit = () => {
-
   const setting = buttonContainer.dataset;
 
   buttonContainer.addEventListener('click', (evt) => {
     settingButtonClickHandler(evt, setting);
   });
-  
 };
 
 const sortListBreakpointChecker = () => {
-  const setting = buttonContainer.dataset;
+  if (buttonContainer) {
+    const setting = buttonContainer.dataset;
 
-  if (!breakpoint.matches) {
-    setClass(setting, getDefaultButtonsParams())
-  } 
-}
+    if (!breakpoint.matches) {
+      setClass(setting, getDefaultButtonsParams());
+    }
+  }
+};
 
 breakpoint.addEventListener('change', sortListBreakpointChecker);
 
-export {sortListInit};
+export {sortListInit, buttonContainer};
