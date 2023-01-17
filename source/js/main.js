@@ -1,5 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {setSliderAttribute} from './modules/slider';
+import {setSliderAttribute, sliderControlContainer} from './modules/slider';
 import {navMenu, navInit} from './modules/navigation';
 import {buttonContainer, sortListInit} from './modules/sort-list';
 import {skillsContainers, accordionInit} from './modules/accordion';
@@ -16,17 +16,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   removeNojsClass(navMenu);
-  removeNojsClass(buttonContainer);
   removeNojsClass(skillsContainers);
-  setSliderAttribute();
+  removeNojsClass(sliderControlContainer);
+  removeNojsClass(buttonContainer);
   navInit();
   accordionInit();
+  setSliderAttribute();
+  sortListInit();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     sortListInit();
+    removeNojsClass(skillsContainers);
   });
 });
 

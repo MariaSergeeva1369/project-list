@@ -66,6 +66,7 @@
 .intro__list-wrapper {
   @include vp-1023 {
     padding: 15px 24px;
+    cursor: pointer;
 
     &--prof,
     &--personal {
@@ -123,6 +124,8 @@
 .intro__skill-list {
   @include vp-1023 {
     margin-top: 20px;
+    height: auto;
+    transition: 0.5s linear;
   }
 }
 
@@ -147,6 +150,7 @@
       height: 20px;
       background-color: $color-default-white;
       transform: rotate(45deg);
+      transition: 0.3s linear;
     }
 
     &::before {
@@ -156,7 +160,8 @@
       width: 2px;
       height: 20px;
       background-color: $color-default-white;
-      transform: rotate(-45deg);
+      transform: rotate(135deg);
+      transition: 0.3s linear;
     }
 
     @include hover-focus {
@@ -172,17 +177,22 @@
   @include vp-1023 {
     &::after {
       transform: rotate(90deg);
+      transition: 0.3s linear;
     }
 
     &::before {
       transform: rotate(180deg);
+      transition: 0.3s linear;
     }
   }
 }
 
 .is-closed .intro__skill-list {
   @include vp-1023 {
-    display: none;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s linear;
   }
 }
 
@@ -190,8 +200,9 @@
 
 .is-nojs .intro__skill-list {
   @include vp-1023 {
-    display: block;
-    transition: 3s linear;
+    margin-top: 20px;
+    height: auto;
+    transition: none;
   }
 }
 

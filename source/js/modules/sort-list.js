@@ -1,4 +1,4 @@
-import {breakpoint} from '../utils/utils';
+import {breakpointTablet} from '../utils/utils';
 
 const buttonContainer = document.querySelector('[data-setting-name="buttons-container"]');
 const settingButtons = document.querySelectorAll('[data-setting-name="viewCard"]');
@@ -31,7 +31,7 @@ const setClass = ({settingTarget}, params) => {
     const buttonElements = Array.from(settingButtons);
     buttonElements.forEach((item) => targetElement.classList.remove(item.dataset.settingValue));
 
-    if (breakpoint.matches) {
+    if (breakpointTablet.matches) {
       targetElement.classList.add(value);
       setActiveButton(params);
     } else {
@@ -66,12 +66,12 @@ const sortListBreakpointChecker = () => {
   if (buttonContainer) {
     const setting = buttonContainer.dataset;
 
-    if (!breakpoint.matches) {
+    if (!breakpointTablet.matches) {
       setClass(setting, getDefaultButtonsParams());
     }
   }
 };
 
-breakpoint.addEventListener('change', sortListBreakpointChecker);
+breakpointTablet.addEventListener('change', sortListBreakpointChecker);
 
 export {sortListInit, buttonContainer};

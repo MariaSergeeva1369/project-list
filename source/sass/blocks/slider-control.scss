@@ -46,3 +46,8 @@
 .swiper-button-prev {
   left: 10px;
 }
+
+//Поведение при отключеном js
+.is-nojs .slider-control__button {
+  display: none;
+}

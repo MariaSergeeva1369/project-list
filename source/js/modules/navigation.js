@@ -1,6 +1,6 @@
 import {FocusLock} from '../utils/focus-lock.js';
 import {ScrollLock} from '../utils/scroll-lock.js';
-import {breakpoint, isEscapeKey} from '../utils/utils';
+import {breakpointTablet, isEscapeKey} from '../utils/utils';
 
 const navMenu = document.querySelector('[data-setting-name="navigation"]');
 const mainElement = document.querySelector('main');
@@ -23,6 +23,7 @@ const closeMenu = () => {
   navMenu.classList.add('is-closed');
   unlockFocusScroll();
   mainElement.removeEventListener('click', closeMenu);
+  setLinkAttribute();
 };
 
 const closeMenulOnEscape = (evt) => {
@@ -33,46 +34,59 @@ const closeMenulOnEscape = (evt) => {
   }
 };
 
+const setLinkAttribute = () => {
+  const linkContainers = navMenu.querySelectorAll('a');
+  if (!breakpointTablet.matches) {
+    if (navMenu.classList.contains('is-closed')) {
+      linkContainers.forEach((link) => link.setAttribute('tabIndex', -1));
+    } else {
+      linkContainers.forEach((link) => link.removeAttribute('tabIndex'));
+    }
+  } else {
+    linkContainers.forEach((link) => link.removeAttribute('tabIndex'));
+  }
+};
+
 const applySettings = () => {
+  const textContainer = navMenu.querySelector('span');
+
   if (navMenu.classList.contains('is-opened')) {
     lockFocusScroll();
     document.addEventListener('keydown', closeMenulOnEscape);
     mainElement.addEventListener('click', closeMenu);
+    textContainer.textContent = 'Закрыть меню';
   } else {
     unlockFocusScroll();
     document.removeEventListener('keydown', closeMenulOnEscape);
     mainElement.removeEventListener('click', closeMenu);
+    textContainer.textContent = 'Открыть меню';
   }
 };
 
 const menuHandler = () => {
-  if (!breakpoint.matches) {
-    const textContainer = navMenu.querySelector('span');
+  if (!breakpointTablet.matches) {
     navMenu.classList.toggle('is-closed');
     navMenu.classList.toggle('is-opened');
 
-    if (navMenu.classList.contains('is-opened')) {
-      textContainer.textContent = 'Закрыть меню';
-    } else {
-      textContainer.textContent = 'Открыть меню';
-    }
-
     applySettings();
+    setLinkAttribute();
   }
 };
 
 const navInit = () => {
   if (navMenu) {
     navMenu.addEventListener('click', menuHandler);
+    setLinkAttribute();
   }
 };
 
 const navBreakpointChecker = () => {
-  if (breakpoint.matches && navMenu.classList.contains('is-opened')) {
+  if (breakpointTablet.matches && navMenu.classList.contains('is-opened')) {
     closeMenu();
   }
+  setLinkAttribute();
 };
 
-breakpoint.addEventListener('change', navBreakpointChecker);
+breakpointTablet.addEventListener('change', navBreakpointChecker);
 
 export {navInit, navMenu};

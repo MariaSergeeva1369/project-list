@@ -3,6 +3,7 @@ Swiper.use([Navigation, Pagination]);
 
 const sliderCertificatesList = document.querySelector('.swiper');
 const activeSlides = document.getElementsByClassName('swiper-slide-active');
+const sliderControlContainer = document.querySelector('[data-setting-name="slider-control-container"]');
 
 if (sliderCertificatesList) {
   const mySwiper = new Swiper(sliderCertificatesList, {
@@ -39,4 +40,4 @@ function setSliderAttribute() {
   }
 }
 
-export {setSliderAttribute};
+export {setSliderAttribute, sliderControlContainer};

@@ -1,4 +1,4 @@
-const breakpoint = window.matchMedia('(min-width: 768px)');
+const breakpointTablet = window.matchMedia('(min-width: 768px)');
 const breakpointDesk = window.matchMedia('(min-width: 1024px)');
 const isEscapeKey = (evt) => evt.key === 'Escape';
 
@@ -10,4 +10,4 @@ const removeNojsClass = (elements) => {
   }
 };
 
-export {breakpoint, breakpointDesk, isEscapeKey, removeNojsClass};
+export {breakpointTablet, breakpointDesk, isEscapeKey, removeNojsClass};

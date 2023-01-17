@@ -65,7 +65,7 @@
 }
 
 .contacts__link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   @include hover-focus {
