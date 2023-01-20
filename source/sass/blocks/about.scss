@@ -1,0 +1,36 @@
+.about {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+
+  @include vp-767 {
+    margin-right: 20px;
+  }
+}
+
+.about__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-default-white;
+  max-width: 200px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 16px;
+    max-width: 170px;
+  }
+}
+
+.about__image {
+  margin-right: 20px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+
+  @include vp-767 {
+    margin-right: 8px;
+  }
+}

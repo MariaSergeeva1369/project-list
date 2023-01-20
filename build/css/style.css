@@ -1675,6 +1675,12 @@ button,
 }
 
 .header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -2326,6 +2332,34 @@ button,
   margin: 0;
 }
 
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.about__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  max-width: 200px;
+}
+
+.about__image {
+  margin-right: 20px;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -2410,6 +2444,13 @@ button,
   }
 
   .intro__list-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    -ms-grid-columns: (auto)[2];
+    grid-template-columns: repeat(2, auto);
     padding: 15px 24px;
     cursor: pointer;
   }
@@ -2447,10 +2488,9 @@ button,
   }
 
   .intro__list-button {
-    display: inline-block;
-    vertical-align: baseline;
-    position: absolute;
-    right: 30px;
+    display: block;
+    margin-left: auto;
+    position: relative;
     width: 30px;
     height: 30px;
     border: none;
@@ -2606,7 +2646,7 @@ button,
     line-height: 22px;
   }
 
-  .skill-list__item--modified {
+  .skill-list--modified .skill-list__item {
     font-size: 16px;
     line-height: 18px;
   }
@@ -2661,6 +2701,7 @@ button,
     background: -o-linear-gradient(left, #a7b0ec, #ad6dcb, #ad6dcb);
     background: linear-gradient(90deg, #a7b0ec, #ad6dcb, #ad6dcb);
     z-index: 10;
+    min-width: 320px;
   }
 
   .nav--modified .nav__list {
@@ -2869,6 +2910,10 @@ button,
     padding: 16px;
   }
 
+  .intro__sub-title {
+    font-size: 19px;
+  }
+
   .intro__slider {
     width: 100%;
     min-width: 288px;
@@ -2980,10 +3025,24 @@ button,
     min-height: 0;
   }
 
-  .skill-list__item--modified {
+  .skill-list--modified .skill-list__item {
     padding-left: 20px;
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .about {
+    margin-right: 20px;
+  }
+
+  .about__title {
+    font-size: 14px;
+    line-height: 16px;
+    max-width: 170px;
+  }
+
+  .about__image {
+    margin-right: 8px;
   }
 }
 

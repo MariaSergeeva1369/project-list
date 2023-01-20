@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="На данном сайте представлен список проектов, реализованных Сергеевой М.Н. Каждый проект дополнен ссылкой на сайт проекта и github">
+    <meta name="description" content="На данном сайте представлен список проектов, реализованных Сергеевой М.Н. Каждый проект дополнен ссылкой на страницу проекта и github">
     <title>Мария Сергеева - Список проектов</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -13,12 +13,17 @@
   </head>
 
   <body>
-
-    <h1 class="visually-hidden">Сайт-резюме</h1>
-
     <div class="wrapper">
-      <header class="header">
+
+      <header class="header"  data-setting-name="header">
         <div class="header__wrapper container">
+          <div class="header__about about">
+            <picture>
+              <source type="image/webp" srcset="./img/maria.webp 1x, ./img/maria@2x.webp 2x">
+              <img class="about__image" src="./img/maria.jpg" srcset="./img/maria@2x.jpg 2x" width="40" height="40" alt="Сергеева Мария">
+            </picture>
+            <h1 class="about__title">Сайт-портфолио Марии Сергеевой</h1>
+          </div>
           <nav class="header__nav nav nav--modified is-closed is-nojs" data-setting-name="navigation">
             <button class="nav__toggle" type="button">
               <span class="visually-hidden">Открыть меню</span>
@@ -186,7 +191,7 @@
             </ul>
             <ul class="projects__list is-tile">
               <li class="projects__item site-card" tabindex="0">
-                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/fitness/build/" target="_blank" aria-label="Перейти на сайт проекта">
+                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/fitness/build/" target="_blank" aria-label="Перейти на страницу проекта">
                   <picture>
                     <source type="image/webp" srcset="./img/super-gym.webp 1x, ./img/super-gym@2x.webp 2x">
                     <img class="site-card__img" src="./img/super-gym.jpg" srcset="./img/super-gym@2x.jpg 2x" width="520" height="375" alt="Превью проекта SUPERGYM">
@@ -209,12 +214,12 @@
                   <li class="skill-list__item">слайдер</li>
                   <li class="skill-list__item">карусель</li>
                 </ul>
-                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/fitness/build/" target="_blank">Перейти на сайт проекта</a>
+                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/fitness/build/" target="_blank">Перейти на страницу проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/fitness" target="_blank">Перейти на github</a>
               </li>
 
               <li class="projects__item site-card" tabindex="0">
-                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/cruise/build/" target="_blank" aria-label="Перейти на сайт проекта">
+                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/cruise/build/" target="_blank" aria-label="Перейти на страницу проекта">
                   <picture>
                     <source type="image/webp" srcset="./img/cruise.webp 1x, ./img/cruise@2x.webp 2x">
                     <img class="site-card__img" src="./img/cruise.jpg" srcset="./img/cruise@2x.jpg 2x" width="520" height="375" alt="Превью проекта Круизы в Антарктику">
@@ -236,12 +241,12 @@
                   <li class="skill-list__item">мобильное меню</li>
                   <li class="skill-list__item">карта Яндекс</li>
                 </ul>
-                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/cruise/build/" target="_blank">Перейти на сайт проекта</a>
+                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/cruise/build/" target="_blank">Перейти на страницу проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/cruise" target="_blank">Перейти на github</a>
               </li>
 
               <li class="projects__item site-card" tabindex="0">
-                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/smart-divice/build/" target="_blank" aria-label="Перейти на сайт проекта">
+                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/smart-divice/build/" target="_blank" aria-label="Перейти на страницу проекта">
                   <picture>
                     <source type="image/webp" srcset="./img/smart-divice.webp 1x, ./img/smart-device@2x.webp 2x">
                     <img class="site-card__img" src="./img/smart-device.jpg" srcset="./img/smart-device@2x.jpg 2x" width="520" height="375" alt="Превью проекта Smart Device">
@@ -263,12 +268,12 @@
                   <li class="skill-list__item">модальное окно</li>
                   <li class="skill-list__item">подробная маска номера телефона</li>
                 </ul>
-                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/smart-divice/build/" target="_blank">Перейти на сайт проекта</a>
+                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/smart-divice/build/" target="_blank">Перейти на страницу проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/smart-divice" target="_blank">Перейти на github</a>
               </li>
 
               <li class="projects__item site-card" tabindex="0">
-                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/drink-to-go/build/" target="_blank" aria-label="Перейти на сайт проекта">
+                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/drink-to-go/build/" target="_blank" aria-label="Перейти на страницу проекта">
                   <picture>
                     <source type="image/webp" srcset="./img/drink-to-go.webp 1x, ./img/drink-to-go@2x.webp 2x">
                     <img class="site-card__img" src="./img/drink-to-go.jpg" srcset="./img/drink-to-go@2x.jpg 2x" width="520" height="375" alt="Превью проекта Drink to go">
@@ -291,12 +296,12 @@
                   <li class="skill-list__item">слайдер</li>
                   <li class="skill-list__item">карта на библиотеке leaflet</li>
                 </ul>
-                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/drink-to-go/build/" target="_blank">Перейти на сайт проекта</a>
+                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/drink-to-go/build/" target="_blank">Перейти на страницу проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/drink-to-go" target="_blank">Перейти на github</a>
               </li>
 
               <li class="projects__item site-card" tabindex="0">
-                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/2022661-keksobooking-26/" target="_blank" aria-label="Перейти на сайт проекта">
+                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/2022661-keksobooking-26/" target="_blank" aria-label="Перейти на страницу проекта">
                   <picture>
                     <source type="image/webp" srcset="./img/keksobooking.webp 1x, ./img/keksobooking@2x.webp 2x">
                     <img class="site-card__img" src="./img/keksobooking.jpg" srcset="./img/keksobooking@2x.jpg 2x" width="520" height="375" alt="Превью проекта KEKSOBOOKING">
@@ -316,12 +321,12 @@
                   <li class="skill-list__item">валидация формы через pristine</li>
                   <li class="skill-list__item">карта leaflet</li>
                 </ul>
-                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/2022661-keksobooking-26" target="_blank">Перейти на сайт проекта</a>
+                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/2022661-keksobooking-26" target="_blank">Перейти на страницу проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/2022661-keksobooking-26" target="_blank">Перейти на github</a>
               </li>
 
               <li class="projects__item site-card" tabindex="0">
-                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/2022661-cat-energy-25/build/index.html" target="_blank" aria-label="Перейти на сайт проекта">
+                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/2022661-cat-energy-25/build/index.html" target="_blank" aria-label="Перейти на страницу проекта">
                   <picture>
                     <source type="image/webp" srcset="./img/cat-energy.webp 1x, ./img/cat-energy@2x.webp 2x">
                     <img class="site-card__img" src="./img/cat-energy.jpg" srcset="./img/cat-energy@2x.jpg 2x" width="520" height="375" alt="Превью проекта CAT ENERGY">
@@ -343,12 +348,12 @@
                   <li class="skill-list__item">мобильное меню</li>
                   <li class="skill-list__item">карта Google</li>
                 </ul>
-                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/2022661-cat-energy-25/build/index.html" target="_blank">Перейти на сайт проекта</a>
+                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/2022661-cat-energy-25/build/index.html" target="_blank">Перейти на страницу проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/2022661-cat-energy-25" target="_blank">Перейти на github</a>
               </li>
 
               <li class="projects__item site-card" tabindex="0">
-                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/sedona-update/build/" target="_blank" aria-label="Перейти на сайт проекта">
+                <a class="site-card__img-link" href="https://mariasergeeva1369.github.io/sedona-update/build/" target="_blank" aria-label="Перейти на страницу проекта">
                   <picture>
                     <source type="image/webp" srcset="./img/sedona.webp 1x, ./img/sedona@2x.webp 2x">
                     <img class="site-card__img" src="./img/sedona.jpg" srcset="./img/sedona@2x.jpg 2x" width="520" height="375" alt="Превью проекта SEDONA">
@@ -368,7 +373,7 @@
                   <li class="skill-list__item">2 страницы</li>
                   <li class="skill-list__item">модальное окно</li>
                 </ul>
-                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/sedona-update/build/" target="_blank">Перейти на сайт проекта</a>
+                <a class="site-card__link-site button" href="https://mariasergeeva1369.github.io/sedona-update/build/" target="_blank">Перейти на страницу проекта</a>
                 <a class="site-card__link-git button" href="https://github.com/MariaSergeeva1369/sedona-update" target="_blank">Перейти на github</a>
               </li>
             </ul>

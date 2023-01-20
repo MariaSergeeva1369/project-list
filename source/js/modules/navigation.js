@@ -3,6 +3,7 @@ import {ScrollLock} from '../utils/scroll-lock.js';
 import {breakpointTablet, isEscapeKey} from '../utils/utils';
 
 const navMenu = document.querySelector('[data-setting-name="navigation"]');
+const headerElement = document.querySelector('[data-setting-name="header"]');
 const mainElement = document.querySelector('main');
 
 const focusLock = new FocusLock();
@@ -75,7 +76,7 @@ const menuHandler = () => {
 
 const navInit = () => {
   if (navMenu) {
-    navMenu.addEventListener('click', menuHandler);
+    headerElement.addEventListener('click', menuHandler);
     setLinkAttribute();
   }
 };
