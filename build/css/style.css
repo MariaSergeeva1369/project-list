@@ -2276,6 +2276,15 @@ button,
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
+.sort-list__button.focus-visible:focus {
+  opacity: 0.6;
+}
+
+.sort-list__button.focus-visible:focus {
+  outline: 2px solid #ff0054;
+  border-radius: 2px;
+}
+
 .sort-list__button svg {
   fill: #ad6dcb;
   opacity: 0.6;

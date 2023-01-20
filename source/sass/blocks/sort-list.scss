@@ -21,8 +21,13 @@
   background-color: $color-light-gray;
   box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
 
-  @include hover {
+  @include hover-focus {
     opacity: 0.6;
+  }
+
+  @include focus {
+    outline: 2px solid $color-torch-red;
+    border-radius: 2px;
   }
 }
 
