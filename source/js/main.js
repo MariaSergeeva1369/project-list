@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {setSliderAttribute, sliderControlContainer} from './modules/slider';
-import {navMenu, navInit} from './modules/navigation';
-import {buttonContainer, sortListInit} from './modules/sort-list';
+import {setSliderAttribute} from './modules/slider';
+import {navInit} from './modules/navigation';
+import {sortListInit} from './modules/sort-list';
 import {skillsContainers, accordionInit} from './modules/accordion';
 import {removeNojsClass} from './utils/utils';
 
@@ -15,10 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // Modules
-  removeNojsClass(navMenu);
-  removeNojsClass(skillsContainers);
-  removeNojsClass(sliderControlContainer);
-  removeNojsClass(buttonContainer);
   navInit();
   accordionInit();
   setSliderAttribute();

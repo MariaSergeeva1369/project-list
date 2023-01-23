@@ -8,7 +8,6 @@
     display: flex;
     background: $main-gradient-wide;
     z-index: 10;
-    min-width: 320px;
   }
 
   .nav--modified .nav__list {
@@ -134,10 +133,11 @@
   .nav--modified.is-opened .nav__list-wrapper {
     transform: translateY(0);
     transition: 0.5s linear;
+    min-width: 320px;
   }
 }
 
-//Обычное меню
+//Обычное меню + меню без работающего js
 .nav__toggle,
 .nav.is-nojs .nav__toggle,
 .nav--modified.is-nojs .nav__toggle {
@@ -145,6 +145,21 @@
 
   @include vp-767 {
     display: none;
+  }
+}
+
+.nav--modified.is-nojs {
+  margin-left: auto;
+}
+
+.nav--modified.is-nojs .nav__list-wrapper {
+  background: none;
+
+  @include vp-767 {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    justify-content: end;
   }
 }
 
@@ -158,11 +173,11 @@
   font-size: 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: end;
+  gap: 20px;
   text-transform: uppercase;
   flex-direction: row;
-  flex-shrink: 1;
+  flex-grow: 0;
   background-color: transparent;
 
   @include vp-767 {
@@ -170,6 +185,7 @@
     display: flex;
   }
 }
+
 
 .nav__link,
 .nav.is-nojs .nav__link,
@@ -192,14 +208,6 @@
   @include focus {
     outline: 2px solid $color-torch-red;
     border-radius: 2px;
-  }
-}
-
-.nav--modified.is-nojs .nav__list-wrapper {
-  @include vp-767 {
-    position: relative;
-    top: 0;
-    transform: translateY(0);
   }
 }
 
