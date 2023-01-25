@@ -2454,6 +2454,7 @@ button,
   .intro__content-wrapper {
     max-width: none;
     margin-right: 0;
+    margin-bottom: 40px;
   }
 
   .intro__intro-text-wrapper {
